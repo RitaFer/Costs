@@ -1,16 +1,23 @@
 import Form from './Form'
+import Button from './Button'
 
 function Event() {
 
-  function myEvent(){
-    console.log(`Ativadxxxxxxxxxxxxx!`)
+  function firstEvent(){
+    console.log(`Ativando primeiro evento...`)
+  }
+
+  function secondEvent(){
+    console.log(`Ativando segundo evento...`)
   }
 
   return(
     <>
     <h1>Testando Eventos</h1>
+    <p>---------------------------------------------------------------------------------------------------------------</p>
     <p>Clique abaixo para disparar o evento.</p>
-    <button onClick={myEvent}>Acessar</button>
+    <Button event={firstEvent} text="Primeiro Evento"/>
+    <Button event={secondEvent} text="Segundo Evento"/>
     <Form/>
     </>
   )
