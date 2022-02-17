@@ -1,0 +1,31 @@
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 1.5em;
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.social li {
+  margin: 0 0.5em;
+}
+
+.social li:hover {
+  color: #fb2;
+}
+
+.social svg {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.footer p {
+  color: #fb2;
+  margin-top: 1em;
+  font-size: 1em;
+}
