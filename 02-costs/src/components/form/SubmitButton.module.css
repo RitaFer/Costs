@@ -1,13 +1,16 @@
 .btn {
   background-color: #222;
   color: #FFF;
-  padding: 0.5em 1em;
-  text-decoration: none;
+  padding: 0.8em 2em;
   transition: 0.5s;
+  border: none;
   border-radius: 1em;
-  align-items: center;
+  float: right;
+  cursor: pointer;
+  font-size: 1em bold;
 }
 
 .btn:hover {
   color: #fb3
 }
+

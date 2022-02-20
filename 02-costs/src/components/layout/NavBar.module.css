@@ -1,8 +1,10 @@
 .navbar {
+  display: flex;
   justify-content: space-between;
   background-color: #222;
   padding: 1em;
   height: 15vh;
+  align-items: center;
 }
 
 .img {
