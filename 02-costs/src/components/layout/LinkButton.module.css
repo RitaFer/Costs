@@ -4,8 +4,11 @@
   padding: 0.5em 1em;
   text-decoration: none;
   transition: 0.5s;
-  border-radius: 1em;
+  border-radius: 0.5em;
   align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: max-content;
 }
 
 .btn:hover {

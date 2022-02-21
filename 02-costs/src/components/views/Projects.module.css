@@ -1,0 +1,14 @@
+.projects_container {
+  align-content: center;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2em 1em 2em;
+}
+
+.title_container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
