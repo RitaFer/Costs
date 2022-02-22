@@ -34,8 +34,8 @@
       "id": 3
     },
     {
-      "name": "Bruno",
-      "budget": "599990",
+      "name": "teste",
+      "budget": "456",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
@@ -45,8 +45,8 @@
       "id": 4
     },
     {
-      "name": "HTML",
-      "budget": "7895",
+      "name": "Marketing",
+      "budget": "23456789",
       "category": {
         "id": "1",
         "name": "Infra"
@@ -56,14 +56,15 @@
       "id": 5
     },
     {
+      "name": "asdfghbnm",
+      "budget": "234567",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
       "cost": 0,
       "services": [],
       "id": 6
-    },
-    {
-      "cost": 0,
-      "services": [],
-      "id": 7
     }
   ],
   "categories": [

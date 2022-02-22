@@ -1,10 +1,11 @@
 .navbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
+  margin: auto;
   background-color: #222;
   padding: 1em;
-  height: 15vh;
-  align-items: center;
 }
 
 .img {
