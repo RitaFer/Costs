@@ -17,5 +17,5 @@
 
 .colunm {
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
 }

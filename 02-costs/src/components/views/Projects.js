@@ -29,6 +29,7 @@ function Projects() {
     .then((resp) => resp.json())
     . then((data) => {
       setProjects(data)
+      console.log(projects)
       setRemoveLoading(true)
     })
     .catch((err) => {console.log(err)})
@@ -46,7 +47,7 @@ function Projects() {
       setProjects(projects.filter((project) => project.id !== id)),
       setProjectMessage('Projeto removido com sucesso!')
     )).catch((err) => console.log(err))
-  }
+    }
 
   return (
     <div className={styles.projects_container}>
@@ -56,7 +57,7 @@ function Projects() {
       </div>
       {message && <Message msg={message} type="success"/>}
       {projectMessage && <Message msg={projectMessage} type="success"/>}
-      <Container customClass="start">
+      <Container>
         {projects.length > 0 &&
             projects.map((project) => (
               <ProjectCard
