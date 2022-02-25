@@ -2,11 +2,14 @@ import styles from './Project.module.css'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Container from '../layout/Container'
+import ProjectForm from '../project/ProjectForm'
 
 function Project () {
   const { id } = useParams()
   const [project, setProject] = useState([])
   const [category, setCategory] = useState([])
+  const [message, setMessage] = useState()
+  const [typeMessage, setTypeMessage] = useState()
   
   const [showProjectForm, setShowProjectForm] = useState(false)
 
@@ -22,6 +25,28 @@ function Project () {
         setProject(data)
       }).catch((err) => console.log(err))
   }, [id])
+
+  function editPost(project){
+    //budget validation
+    if(project.budget < project.cost){
+      //mensagem
+    }
+
+    fetch(`http://localhost:5000/projects/${project.id}`, {
+      method:'PATCH',
+      headers:{
+        'Content-Type':'application/json',
+      },
+      body: JSON.stringify(project),
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setProject(data)
+        setCategory(data.category)
+        setShowProjectForm(!showProjectForm)
+      })
+      .catch((err) => console.log(err))
+    }
 
   function toggleProjectForm () {
     setShowProjectForm(!showProjectForm)
@@ -46,7 +71,11 @@ function Project () {
           </div>
         ) : (
           <div className={styles.project_info}>
-            <p>Formulário de Atualização do Projeto</p>
+            <ProjectForm 
+              handleSubmit={editPost} 
+              btnText="Concluir" 
+              projectData={project}
+            />
           </div>
         )}
         <button onClick={toggleProjectForm} className={styles.btn}>
@@ -57,5 +86,4 @@ function Project () {
     </div>
   )
 }
-
 export default Project
