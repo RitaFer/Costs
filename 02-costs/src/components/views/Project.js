@@ -3,15 +3,17 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Container from '../layout/Container'
 import ProjectForm from '../project/ProjectForm'
+import Message from '../layout/Message'
 
 function Project () {
   const { id } = useParams()
   const [project, setProject] = useState([])
   const [category, setCategory] = useState([])
-  const [message, setMessage] = useState()
-  const [typeMessage, setTypeMessage] = useState()
+  const [message, setMessage] = useState('')
+  const [type, setType] = useState('success')
   
   const [showProjectForm, setShowProjectForm] = useState(false)
+  const [showServiceForm, setShowServiceForm] = useState(false)
 
   useEffect(() => {
     fetch(`http://localhost:5000/projects/${id}`, {
@@ -26,10 +28,12 @@ function Project () {
       }).catch((err) => console.log(err))
   }, [id])
 
-  function editPost(project){
-    //budget validation
-    if(project.budget < project.cost){
-      //mensagem
+  function editPost(project) {
+    setMessage('')
+    if (project.budget < project.cost) {
+      setMessage('O Orçamento não pode ser menor que o custo do projeto!')
+      setType('error')
+      return false
     }
 
     fetch(`http://localhost:5000/projects/${project.id}`, {
@@ -44,19 +48,26 @@ function Project () {
         setProject(data)
         setCategory(data.category)
         setShowProjectForm(!showProjectForm)
+        setMessage('Projeto atualizado!')
+        setType('success')
       })
-      .catch((err) => console.log(err))
     }
 
   function toggleProjectForm () {
     setShowProjectForm(!showProjectForm)
   }
 
+  function toggleServiceForm () {
+    setShowServiceForm(!showServiceForm)
+  }
+
   return (
     <div className={styles.project_details}>
     <Container customClass='column'>
-      <div className={styles.details_container}>
+        <div className={styles.details_container}>
         <h1>PROJETO: {project.name}</h1>
+        
+        {message && <Message type={type} msg={message} />}
         {!showProjectForm ? (
           <div className={styles.project_info}>
             <p>
@@ -78,6 +89,9 @@ function Project () {
             />
           </div>
         )}
+        <button onClick={toggleServiceForm} className={styles.btn}>
+          {!showServiceForm ? 'Adicionar Serviço' : 'Fechar'}
+        </button>
         <button onClick={toggleProjectForm} className={styles.btn}>
           {!showProjectForm ? 'Editar Projeto' : 'Fechar'}
         </button>

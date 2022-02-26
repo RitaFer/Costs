@@ -7,10 +7,6 @@
   flex-wrap: wrap;
 }
 
-.minHeight {
-  min-height: 65.2vh;
-}
-
 .start {
   justify-content: center;
 }

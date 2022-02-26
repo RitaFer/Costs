@@ -1,8 +1,8 @@
 {
   "projects": [
     {
-      "name": "Projeto Teste 1",
-      "budget": "5000",
+      "name": "xpto",
+      "budget": "15970",
       "category": {
         "id": "1",
         "name": "Infra"
@@ -12,37 +12,37 @@
       "id": 1
     },
     {
-      "name": "teste 1",
-      "budget": "121",
+      "name": "Marketing",
+      "budget": "7896",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "Teste",
+      "budget": "853",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "Teste",
+      "budget": "8502",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": [],
       "id": 4
-    },
-    {
-      "name": "teste 2",
-      "budget": "5204",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 5
-    },
-    {
-      "name": "Teste",
-      "budget": "78962",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 6
     }
   ],
   "categories": [
