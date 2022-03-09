@@ -1,4 +1,4 @@
-.container {
+/* .container {
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -14,4 +14,21 @@
 .colunm {
   flex-direction: column;
   justify-content: center;
+} */
+
+.container {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.start {
+  justify-content: flex-start;
+}
+
+.column {
+  flex-direction: column;
+  justify-content: flex-start;
 }

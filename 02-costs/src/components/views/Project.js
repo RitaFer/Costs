@@ -61,43 +61,57 @@ function Project () {
     setShowServiceForm(!showServiceForm)
   }
 
-  return (
-    <div className={styles.project_details}>
-    <Container customClass='column'>
-        <div className={styles.details_container}>
-        <h1>PROJETO: {project.name}</h1>
-        
-        {message && <Message type={type} msg={message} />}
-        {!showProjectForm ? (
-          <div className={styles.project_info}>
-            <p>
-              <span>Categoria: </span> {category.name}
-            </p>
-            <p>
-              <span>Total do Orçamento: </span> R${project.budget}
-            </p>
-            <p>
-              <span>Total Utilizado: </span> R${project.cost}
-            </p>
-          </div>
-        ) : (
-          <div className={styles.project_info}>
-            <ProjectForm 
-              handleSubmit={editPost} 
-              btnText="Concluir" 
-              projectData={project}
-            />
-          </div>
-        )}
-        <button onClick={toggleServiceForm} className={styles.btn}>
-          {!showServiceForm ? 'Adicionar Serviço' : 'Fechar'}
-        </button>
-        <button onClick={toggleProjectForm} className={styles.btn}>
-          {!showProjectForm ? 'Editar Projeto' : 'Fechar'}
-        </button>
-      </div>
-    </Container>
-    </div>
+return (
+    <>
+        <div className={styles.project_details}>
+          <Container customClass="column">
+            <div className={styles.details_container}>
+              <h1>PROJETO: {project.name}</h1>
+              <button className={styles.btn} onClick={toggleProjectForm}>
+                    {!showProjectForm ? 'Editar projeto' : 'Fechar'}
+              </button>
+              {message && <Message type={type} msg={message} />}
+              {!showProjectForm ? (
+                <div className={styles.project_info}>
+                  <p>
+                    <span>Categoria:</span> {category.name}
+                  </p>
+                  <p>
+                    <span>Total do orçamento:</span> R${project.budget}
+                  </p>
+                  <p>
+                    <span>Total utilizado:</span> R${project.cost}
+                  </p>
+                </div>
+              ) : (
+                <div className={styles.project_info}>
+                  <ProjectForm
+                    handleSubmit={editPost}
+                    btnText="Concluir Edição"
+                    projectData={project}
+                  />
+                </div>
+              )}
+            </div>
+            <div className={styles.xpto}>
+              <button className={styles.btn} onClick={toggleServiceForm}>
+                {!showServiceForm ? 'Adicionar Serviço' : 'Fechar'}
+              </button>
+              
+            </div>
+              <div className={styles.project_info}>
+                {showServiceForm && (
+                  <div>Teste</div>
+                )}
+              </div>
+              <h2>Serviços:</h2>
+              <Container customClass='start'>
+                <p>serviços</p>
+              </Container>
+          </Container>
+        </div>
+    </>
   )
 }
+
 export default Project
