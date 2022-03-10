@@ -1,0 +1,17 @@
+.contact_container {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.contact_container h1 {
+  padding: 0.3em 1em;
+  color: #FFBB33;
+  background-color: #222;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}

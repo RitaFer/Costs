@@ -1,0 +1,32 @@
+.cardAbout {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background-color: #fff;
+  margin: 1em;
+  border-radius: 0.5em;
+}
+
+.cardAbout h1 {
+  padding: 0.3em 1em;
+  color: #FFBB33;
+  background-color: #222;
+  border-radius: 0.5em;
+  margin-bottom: .5em;
+}
+
+.cardAbout p {
+  padding: 0em 1em 1em 1em;
+  color: #7a7a7a;
+  text-indent: 1em;
+  text-align: justify;
+}
+
+.cardAbout iframe {
+  display: block;
+  margin: 0 auto;
+}

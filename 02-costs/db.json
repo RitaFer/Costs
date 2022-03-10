@@ -1,41 +1,30 @@
 {
   "projects": [
     {
-      "name": "xpto",
-      "budget": "1597",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 1
-    },
-    {
-      "name": "Marketing",
-      "budget": "7896",
+      "name": "Implementação",
+      "budget": "50000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": [],
-      "id": 2
+      "id": 1
     },
     {
-      "name": "Teste",
-      "budget": "853",
+      "name": "Layout",
+      "budget": "100000",
       "category": {
         "id": "3",
         "name": "Design"
       },
       "cost": 0,
       "services": [],
-      "id": 3
+      "id": 2
     },
     {
-      "name": "Teste",
-      "budget": "8502",
+      "name": "Produção",
+      "budget": "10000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
@@ -45,8 +34,8 @@
       "id": 4
     },
     {
-      "name": "Rita",
-      "budget": "850",
+      "name": "Marketing",
+      "budget": "5580",
       "category": {
         "id": "1",
         "name": "Infra"

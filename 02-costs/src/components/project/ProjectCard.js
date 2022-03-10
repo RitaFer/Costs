@@ -11,7 +11,7 @@ function ProjectCard({ id, name, budget, category, handleRemove }) {
 
   return (
     <div className={styles.projectCard}>
-      <h4>{name.toUpperCase()}</h4>
+      <h4>{name}</h4>
       <p>
         <span>Orçamento:</span> R${budget}
       </p>

@@ -8,7 +8,6 @@
   float: right;
   cursor: pointer;
   height: max-content;
-  font-size: 1em;
 }
 
 .btn:hover {

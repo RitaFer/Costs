@@ -20,8 +20,12 @@
 
 .details_container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-content: center;
   flex-wrap: wrap;
+  align-items: center;
+  padding: 0 1em 2em 1em;
+  border-bottom: 1px solid #000;
 }
 
 .btn {
@@ -51,9 +55,30 @@
   background-color: #FFF;
 }
 
-.xpto {
+.service {
   display: flex;
   justify-content: center;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #000;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1em;
+  justify-content: space-between;
+}
+
+.service h2 {
+  font-size: 2em;
+}
+
+.service button {
+  background-color: #222;
+  color: #FFF;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: 0.5s;
+  border-radius: 0.5em;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: max-content;
+  margin: 1em;
 }

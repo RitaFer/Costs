@@ -1,26 +1,25 @@
-.projectCard {
+.serviceCard {
   border: 1px solid #7A7A7A;
   border-radius: 10px;
   min-width: 250px;
   margin: 1%;
 }
 
-.projectCard h4 {
+.serviceCard h4 {
   background-color: #222;
   border-radius: 10px 10px 0px 0px;
   color: #FFBB33;
   padding: 0.5em;
   font-size: 1.5em;
-  margin-bottom: 1em;
   text-indent: .2em;
 }
 
-.projectCard p {
-  padding: 0em 1em 1em 1em;
+.serviceCard p {
+  padding: 1em 1em 0 1em;
   color: #7a7a7a;
 }
 
-.projectCard p span {
+.serviceCard p span {
   font-weight: bold;
 }
 
@@ -50,13 +49,13 @@
   background-color: #e2900d;
 }
 
-.projectCard_actions {
+.serviceCard_actions {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.projectCard_actions a, .projectCard_actions button {
+.serviceCard_actions a, .serviceCard_actions button {
   text-decoration: none;
   background-color: #FFF;
   color: #222;
@@ -69,14 +68,14 @@
   justify-content: center;
   transition: 0.5s;
   border-radius: 1em;
-  margin: 0.5em;
+  margin: 1em;
 }
 
-.projectCard_actions svg {
+.serviceCard_actions svg {
   margin-right: 0.5em;
 }
 
-.projectCard_actions a:hover, .projectCard_actions button:hover {
+.serviceCard_actions a:hover, .serviceCard_actions button:hover {
   color: #FFBB33;
   background-color: #222;
 }

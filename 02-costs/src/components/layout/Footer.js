@@ -7,16 +7,24 @@ function Footer(){
     <footer className={styles.footer}>
       <ul className={styles.social}>
         <li>
-          <FaFacebook/>
+          <a href='https://web.facebook.com/profile.php?id=100009064566176' target='_blank'>
+            <FaFacebook/>
+          </a>
         </li>
         <li>
-          <FaInstagram/>
+          <a href='https://www.instagram.com/_leopis/' target='_blank'>
+            <FaInstagram/>
+          </a>
         </li>
         <li>
+        <a href='https://www.linkedin.com/in/rita-ferr/' target='_blank'>
           <FaLinkedin/>
+        </a>
         </li>
         <li>
+        <a href='https://github.com/RitaFer' target='_blank'>
           <FaGithub/>
+        </a>
         </li>
       </ul>
       <p>
