@@ -46,14 +46,20 @@ function Projects() {
     .then(() => (
       setProjects(projects.filter((project) => project.id !== id)),
       setProjectMessage('Projeto removido com sucesso!')
-    )).catch((err) => console.log(err))
-    }
+    ))
+    .catch((err) => console.log(err))
+  }
 
   return (
     <div className={styles.projects_container}>
       <div className={styles.title_container}>
-        <h1>Meus Projetos</h1>
-        <LinkButton to='/newproject' text="Criar Projeto" />
+        <h1>
+          Meus Projetos
+        </h1>
+        <LinkButton 
+          to='/newproject' 
+          text="Criar Projeto" 
+        />
       </div>
       {message && <Message msg={message} type="success"/>}
       {projectMessage && <Message msg={projectMessage} type="success"/>}

@@ -6,7 +6,9 @@ function Contact(){
 
   return (
     <div className={styles.contact_container}>
-      <h1>Contate-nos</h1>
+      <h1>
+        Contate-nos
+      </h1>
       <form>
       <Input 
         type="text"
@@ -27,7 +29,7 @@ function Contact(){
         placeholder='Insira sua mensagem'
       />
       <SubmitButton text='Enviar' />
-    </form>
+      </form>
     </div>
     
   )

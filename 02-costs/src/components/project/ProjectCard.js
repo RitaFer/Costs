@@ -16,7 +16,7 @@ function ProjectCard({ id, name, budget, category, handleRemove }) {
         <span>Orçamento:</span> R${budget}
       </p>
       <p className={styles.category_text}>
-        <span className={`${styles[category]}`}></span> {category}
+        <span className={`${styles[category]}`}/> {category}
       </p>
       <div className={styles.projectCard_actions}>
         <Link to={`/project/${id}`}>

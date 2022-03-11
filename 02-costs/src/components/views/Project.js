@@ -14,7 +14,6 @@ function Project () {
   const [category, setCategory] = useState([])
   const [message, setMessage] = useState('')
   const [type, setType] = useState('success')
-  
   const [showProjectForm, setShowProjectForm] = useState(false)
   const [showServiceForm, setShowServiceForm] = useState(false)
   const [services, setServices] = useState([])
@@ -30,7 +29,8 @@ function Project () {
         setCategory(data.category)
         setProject(data)
         setServices(data.services)
-      }).catch((err) => console.log(err))
+      })
+      .catch((err) => console.log(err))
   }, [id])
 
   function editPost(project) {
@@ -56,6 +56,7 @@ function Project () {
         setMessage('Projeto atualizado!')
         setType('success')
       })
+      .catch((err) => console.log(err))
     }
 
   function createService(project) {
@@ -86,10 +87,10 @@ function Project () {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        //exibir serviços
         setMessage('')
         setShowServiceForm(false)
       })
+      .catch((err) => console.log(err))
   }
 
   function editService() {
@@ -120,7 +121,7 @@ function Project () {
         setMessage('Serviço removido com sucesso.')
         setType('success')
       })
-
+      .catch((err) => console.log(err))
   }
   
   function toggleProjectForm () {
