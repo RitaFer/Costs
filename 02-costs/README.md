@@ -1,6 +1,6 @@
 # Costs Project
 
-This project wasn't hosted because I used a local database, just for test communication execution frontend-backend.
+This project used basic concepts in React JS. It wasn't hosted because I used a local database, just for test communication execution frontend-backend.
 This project is about an project management with options like add services, remove services, edit services into a project, always respecting our inicial budget. You can run into your machine if you clone my repository, look more in package.json file.
 
 Thank you for your time!
